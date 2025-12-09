@@ -1,0 +1,39 @@
+# Ignore notes to myself file
+Jodi_notes.txt
+
+### DATA ###
+
+# Ignore everything inside data/
+data/*
+
+
+### MODELS ###
+
+# Ignore everything inside models/
+models/*
+
+
+### FIGURES ###
+
+# Allow all figures
+
+
+### SCRIPTS ###
+
+# Ignore unused scripts
+scripts/Notused_*
+
+
+### TRIALS ###
+
+# Ignore all previous trials
+original_exploration_and_trials/
+
+
+### R FILES ###
+
+# Ignore R files
+*.RData
+*.Rhistory
+*.Rproj.user/
+*.Rproj
