@@ -8,19 +8,19 @@ load(file = "data/df_ND_covid.RData")
 df_ND_covid %>% 
   drop_na(NUMSYMPALL_covid2, SEX_genetic, AGE_covid2, matches("^PC.*_genetic$"), COVIDALLBIN_C1C2, PRS_stand_genetic) %>% 
   count(COVIDALLBIN_C1C2) %>%
-  kable(caption = "No. participants that experienced any frightening, horrible or traumatic experiences related to COVID \n Yes = happened to me, witnessed it, learned about it or part of my job in wave 1 and/or wave 2, No = No in wave 1 and wave 2")
+  kable(caption = "No. participants that experienced any frightening, horrible or traumatic experiences related to COVID \n Yes = yes to covid wave 1 and/or wave 2, No = No in wave 1 and wave 2")
 
 df_ND_covid %>% 
   drop_na(NUMSYMPALL_covid2, SEX_genetic, AGE_covid2, matches("^PC.*_genetic$"), COVIDALLBIN_C1C2, PRS_stand_genetic) %>% 
   filter(SEX_genetic == "Female") %>% 
   count(COVIDALLBIN_C1C2) %>%
-  kable(caption = "No. female participants that experienced any frightening, horrible or traumatic experiences related to COVID \n Yes = happened to me, witnessed it, learned about it or part of my job in wave 1 and/or wave 2, No = No in wave 1 and wave 2")
+  kable(caption = "No. female participants that experienced any frightening, horrible or traumatic experiences related to COVID \n Yes = yes to covid wave 1 and/or wave 2, No = No in wave 1 and wave 2")
 
 df_ND_covid %>% 
   drop_na(NUMSYMPALL_covid2, SEX_genetic, AGE_covid2, matches("^PC.*_genetic$"), COVIDALLBIN_C1C2, PRS_stand_genetic) %>% 
   filter(SEX_genetic == "Male") %>% 
   count(COVIDALLBIN_C1C2) %>%
-  kable(caption = "No. male participants that experienced any frightening, horrible or traumatic experiences related to COVID \n Yes = happened to me, witnessed it, learned about it or part of my job in wave 1 and/or wave 2, No = No in wave 1 and wave 2")
+  kable(caption = "No. male participants that experienced any frightening, horrible or traumatic experiences related to COVID \n Yes = yes to covid wave 1 and/or wave 2, No = No in wave 1 and wave 2")
 ## ----
 
 ## ---- CovidDistribution

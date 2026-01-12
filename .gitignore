@@ -37,3 +37,4 @@ original_exploration_and_trials/
 *.Rhistory
 *.Rproj.user/
 *.Rproj
+.Rproj.user

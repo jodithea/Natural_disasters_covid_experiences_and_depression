@@ -55,26 +55,57 @@ venn_bushflood_covid <- ggplot(circle_data) +
   scale_fill_manual(values = c("#20a386", "#287d8e")) +
   coord_fixed() +
   # Add labels inside each circle and in the overlapping section
+  # bushfires/floods only
   annotate("text",
            x = circle_data$x[1] - r_1 / 2,
            y = circle_data$y[1],
            label = one,
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   annotate("text",
+           x = circle_data$x[1] - r_1 / 2,
+           y = circle_data$y[1] - 2,
+           label = paste0(
+             round(one/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  # COVID only
+  annotate("text",
            x = circle_data$x[2] + r_2 / 2,
            y = circle_data$y[2],
            label = two,
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   annotate("text",
+           x = circle_data$x[2] + r_2 / 2,
+           y = circle_data$y[2] - 2,
+           label = paste0(
+             round(two/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  # Both bushfires/floods and covid
+  annotate("text",
            x = mean(circle_data$x) - 3.5,
            y = circle_data$y[1],
            label = overlap,
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
-  # Add label oustide of circles for no. experiencing none
+  annotate("text",
+           x = mean(circle_data$x) - 3.5,
+           y = circle_data$y[1] - 2,
+           label = paste0(
+             round(overlap/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  # Oustide of circles for no. experiencing none
   annotate("text",
            x = mean(circle_data$x) - 3.5,         
            y = -max(r_1, r_2) - 2,         
            label = none,
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = mean(circle_data$x) - 3.5,         
+           y = -max(r_1, r_2) - 4,         
+           label = paste0(
+             round(none/(one + two + overlap + none)*100,2),
+             "%"),
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   # Add labels above the circles
   annotate("text",
@@ -155,26 +186,64 @@ venn_bushflood_covid_female <- ggplot(circle_data) +
   scale_fill_manual(values = c("#eae51a", "#B8DE29FF")) +
   coord_fixed() +
   # Add labels inside each circle and in the overlapping section
+  # Bushfires/floods only
   annotate("text",
-           x = circle_data$x[1] - r_1 / 2,
+           x = circle_data$x[1] - r_1 / 2 + 1,
            y = circle_data$y[1],
            label = one,
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = circle_data$x[1] - r_1 / 2 + 1,
+           y = circle_data$y[1] - 3,
+           label = paste0(
+             round(one/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  # COVID only
   annotate("text",
            x = circle_data$x[2] + r_2 / 2,
            y = circle_data$y[2],
            label = two,
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   annotate("text",
+           x = circle_data$x[2] + r_2 / 2,
+           y = circle_data$y[2] - 3,
+           label = paste0(
+             round(two/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  # Bushfires/floods and COVID
+  annotate("text",
            x = mean(circle_data$x) - 3.2,
            y = circle_data$y[1],
            label = overlap,
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = mean(circle_data$x) - 5.2,
+           y = circle_data$y[1] - 11,
+           label = paste0(
+             round(overlap/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("segment",
+           x = mean(circle_data$x) - 3.2,
+           xend = mean(circle_data$x) - 5.2,
+           y = circle_data$y[1] - 2,
+           yend = circle_data$y[1] - 10,
+           linewidth = 0.4,
+           colour = "black") +
   # Add label oustide of circles for no. experiencing none
   annotate("text",
            x = mean(circle_data$x) - 3.2,         
            y = -max(r_1, r_2) - 2,         
            label = none,
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = mean(circle_data$x) - 3.2,         
+           y = -max(r_1, r_2) - 5,         
+           label = paste0(
+             round(none/(one + two + overlap + none)*100,2),
+             "%"),
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   # Add labels above the circles
   annotate("text",
@@ -256,26 +325,64 @@ venn_bushflood_covid_male <- ggplot(circle_data) +
   scale_fill_manual(values = c("#453781FF", "#440154")) +
   coord_fixed() +
   # Add labels inside each circle and in the overlapping section
+  # Bushfires/floods only
   annotate("text",
-           x = circle_data$x[1] - r_1 / 2,
+           x = circle_data$x[1] - r_1 / 2 + 1,
            y = circle_data$y[1],
            label = one,
            size = 7 / 2.845276, color = "white", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = circle_data$x[1] - r_1 / 2 + 1,
+           y = circle_data$y[1] - 2,
+           label = paste0(
+             round(one/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "white", family = "Arial", fontface = "bold") +
+  # COVID only
   annotate("text",
            x = circle_data$x[2] + r_2 / 2,
            y = circle_data$y[2],
            label = two,
            size = 7 / 2.845276, color = "white", family = "Arial", fontface = "bold") +
   annotate("text",
+           x = circle_data$x[2] + r_2 / 2,
+           y = circle_data$y[2] - 2,
+           label = paste0(
+             round(two/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "white", family = "Arial", fontface = "bold") +
+  # Bushfires/floods and COVID
+  annotate("text",
            x = mean(circle_data$x - 1.2),
            y = circle_data$y[1],
            label = overlap,
            size = 7 / 2.845276, color = "white", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = mean(circle_data$x - 2.2),
+           y = circle_data$y[1] - 6,
+           label = paste0(
+             round(overlap/(one + two + overlap + none)*100,2),
+             "%"),
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("segment",
+           x = mean(circle_data$x) - 1.2,
+           xend = mean(circle_data$x) - 2.2,
+           y = circle_data$y[1] - 1,
+           yend = circle_data$y[1] - 5,
+           linewidth = 0.4,
+           colour = "black") +
   # Add label oustide of circles for no. experiencing none
   annotate("text",
            x = mean(circle_data$x) - 1.2,         
            y = -max(r_1, r_2) - 2,         
            label = none,
+           size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
+  annotate("text",
+           x = mean(circle_data$x) - 1.2,         
+           y = -max(r_1, r_2) - 4,         
+           label = paste0(
+             round(none/(one + two + overlap + none)*100,2),
+             "%"),
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   # Add labels above the circles
   annotate("text",

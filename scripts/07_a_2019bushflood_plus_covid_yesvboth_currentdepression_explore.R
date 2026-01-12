@@ -8,19 +8,19 @@ load(file = "data/df_ND_covid.RData")
 df_ND_covid %>% 
   drop_na(NUMSYMPALL_covid2, SEX_genetic, AGE_covid2, matches("^PC.*_genetic$"), COVIDALL_BUSHFLOOD_both, PRS_stand_genetic) %>% 
   count(COVIDALL_BUSHFLOOD_both) %>%
-  kable(caption = "No. participants that experienced any frightening, horrible or traumatic experiences related to COVID (wave 1 and/or 2) and the bushfires and flooding over the past year \n (Yes = happened to me, witnessed it, learned about it or part of my job to covid wave 1 and/or 2 AND yes to bushfires/floods, No = no to covid wave 1 and 2 and bushfires/floods")
+  kable(caption = "No. participants that experienced any frightening, horrible or traumatic experiences related to COVID (wave 1 and/or 2) and the bushfires and flooding over the past year \n (Yes = yes to covid wave 1 and/or 2 AND yes to bushfires/floods, No = no to covid wave 1 and 2 and bushfires/floods")
 
 df_ND_covid %>% 
   drop_na(NUMSYMPALL_covid2, SEX_genetic, AGE_covid2, matches("^PC.*_genetic$"), COVIDALL_BUSHFLOOD_both, PRS_stand_genetic) %>% 
   filter(SEX_genetic == "Female") %>% 
   count(COVIDALL_BUSHFLOOD_both) %>%
-  kable(caption = "No. female participants that experienced any frightening, horrible or traumatic experiences related to COVID (wave 1 and/or 2) and the bushfires and flooding over the past year \n (Yes = happened to me, witnessed it, learned about it or part of my job to covid wave 1 and/or 2 AND yes to bushfires/floods, No = no to covid wave 1 and 2 and bushfires/floods")
+  kable(caption = "No. female participants that experienced any frightening, horrible or traumatic experiences related to COVID (wave 1 and/or 2) and the bushfires and flooding over the past year \n (Yes = yes to covid wave 1 and/or 2 AND yes to bushfires/floods, No = no to covid wave 1 and 2 and bushfires/floods")
 
 df_ND_covid %>% 
   drop_na(NUMSYMPALL_covid2, SEX_genetic, AGE_covid2, matches("^PC.*_genetic$"), COVIDALL_BUSHFLOOD_both, PRS_stand_genetic) %>% 
   filter(SEX_genetic == "Male") %>% 
   count(COVIDALL_BUSHFLOOD_both) %>%
-  kable(caption = "No. male participants that experienced any frightening, horrible or traumatic experiences related to COVID (wave 1 and/or 2) and the bushfires and flooding over the past year \n (Yes = happened to me, witnessed it, learned about it or part of my job to covid wave 1 and/or 2 AND yes to bushfires/floods, No = no to covid wave 1 and 2 and bushfires/floods")
+  kable(caption = "No. male participants that experienced any frightening, horrible or traumatic experiences related to COVID (wave 1 and/or 2) and the bushfires and flooding over the past year \n (Yes = yes to covid wave 1 and/or 2 AND yes to bushfires/floods, No = no to covid wave 1 and 2 and bushfires/floods")
 ## ----
 
 ## ---- 19BushFloodCovidBothDistribution
