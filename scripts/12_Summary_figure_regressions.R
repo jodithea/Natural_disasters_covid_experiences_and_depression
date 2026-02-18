@@ -132,9 +132,9 @@ plot_main <- ggplot(NUMSYMPALL_PO_plotting_df %>%
                               'COVIDALLBIN_C1C21', 
                               'COVIDALL_BUSHFLOOD_bothYes'),
                    labels = c('Any natural disaster \n(first depressive episode)',
-                              '2019 bushfires/floods',
+                              '2019/2020 \nbushfires and floods',
                               'COVID-19',
-                              '2019 bushfires/floods \nand COVID-19')) +
+                              '2019/2020 bushfires/floods \nand COVID-19')) +
   scale_x_continuous('Odds Ratio', 
                      lim = c(0.45,4.05), 
                      breaks = c(0.5, 1, 2, 4), 
