@@ -27,6 +27,7 @@ library(knitr)        # for kable tables
 library(ggvenn)       # for venn diagram
 library(ggforce)      # ggplot circles
 library(Hmisc)        # power analyses
+library(knitr)        # for kable tables
 library(tidyverse)
 ## ----
 

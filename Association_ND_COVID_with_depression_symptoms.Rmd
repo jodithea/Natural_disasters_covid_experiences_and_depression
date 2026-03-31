@@ -97,6 +97,8 @@ knitr::read_chunk('scripts/10_Demographics.R')
 knitr::read_chunk('scripts/11_Venn_2019bushflood_and_covid.R')
  
 knitr::read_chunk('scripts/12_Summary_figure_regressions.R')
+
+knitr::read_chunk('scripts/13_Summary_results.R')
 ```
 
 ```{r LoadDataRmd, eval = TRUE, echo = FALSE}
@@ -1092,8 +1094,6 @@ plink --bfile /path_three/Release11_Observed/PLINK_format/GWAS_Build37PlusStrand
 ```
 
 
-
-
 # Regressions Summary Figure
 
 ## Summary data
@@ -1116,6 +1116,20 @@ plink --bfile /path_three/Release11_Observed/PLINK_format/GWAS_Build37PlusStrand
 
 ## Save Figures
 ```{r SaveFigures}
+
+```
+
+
+# Regressions Summary Tables
+
+## Natural disaster / Bushfires/flooding / COVID as predictor
+
+```{r SummaryTableND, eval = TRUE}
+
+```
+
+## Polygenic score for depression as predictor
+```{r SummaryTablePGS, eval = TRUE}
 
 ```
 

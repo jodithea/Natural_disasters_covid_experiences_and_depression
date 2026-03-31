@@ -95,6 +95,10 @@ NUMSYMPALL_PO_plotting_df <- NUMSYMPALL_PO_results_df %>%
     P < 0.05 ~ "Uncorrected (P < 0.05)"
   )) %>% 
   mutate(P_adjusted = p.adjust(P, method = "BH", n = 15)) %>%
+  mutate(star = case_when(
+    P_adjusted >= 0.05 ~ "",
+    P_adjusted < 0.05 ~ "*"
+  )) %>% 
   # mutate(P = ifelse(P >= 0.009, sprintf("%.2f", P), sprintf("%.0e", P))) %>% 
   mutate(P_adjusted = ifelse(P_adjusted >= 0.009, sprintf("%.2f", P_adjusted), sprintf("%.0e", P_adjusted))) %>%
   mutate(rowname = factor(rowname, levels = order),
@@ -112,13 +116,15 @@ plot_main <- ggplot(NUMSYMPALL_PO_plotting_df %>%
   geom_pointrange(aes(x = OR, xmin = lower_95_CI_of_OR, 
                       xmax = upper_95_CI_of_OR),
                   position = position_dodge(width = -0.5)) +
-  geom_text(aes(x = OR, y = rowname, label = P_adjusted), 
+  geom_text(aes(x = upper_95_CI_of_OR + 0.1, 
+                y = rowname, 
+                label = star), 
             position = position_dodge(width = -0.5), 
-            vjust = 0, 
-            hjust = -0.5,
+            size = 5,
+            vjust = 0.5,
             show.legend = FALSE) +
   geom_vline(xintercept = 1,
-             colour = "grey",
+             colour = "grey30",
              linetype = 'dotted') +
   scale_colour_manual(values = c("Both" = "#287d8e",
                                  "Female" = "#eae51a",
@@ -161,13 +167,15 @@ plot_sensitivity <- ggplot(NUMSYMPALL_PO_plotting_df %>%
   geom_pointrange(aes(x = OR, xmin = lower_95_CI_of_OR, 
                       xmax = upper_95_CI_of_OR),
                   position = position_dodge(width = -0.5)) +
-  geom_text(aes(x = OR, y = rowname, label = P_adjusted), 
+  geom_text(aes(x = upper_95_CI_of_OR + 0.1, 
+                y = rowname, 
+                label = star), 
             position = position_dodge(width = -0.5), 
-            vjust = 0, 
-            hjust = -0.5,
+            size = 5,
+            vjust = 0.5,
             show.legend = FALSE) +
   geom_vline(xintercept = 1,
-             colour = "grey",
+             colour = "grey30",
              linetype = 'dotted') +
   scale_colour_manual(values = c("Both" = "#287d8e",
                                  "Female" = "#eae51a",

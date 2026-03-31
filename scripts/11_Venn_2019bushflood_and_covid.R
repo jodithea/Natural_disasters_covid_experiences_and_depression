@@ -98,7 +98,7 @@ venn_bushflood_covid <- ggplot(circle_data) +
   annotate("text",
            x = mean(circle_data$x) - 3.5,         
            y = -max(r_1, r_2) - 2,         
-           label = none,
+           label = paste0("No = ", none),
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   annotate("text",
            x = mean(circle_data$x) - 3.5,         
@@ -235,8 +235,8 @@ venn_bushflood_covid_female <- ggplot(circle_data) +
   # Add label oustide of circles for no. experiencing none
   annotate("text",
            x = mean(circle_data$x) - 3.2,         
-           y = -max(r_1, r_2) - 2,         
-           label = none,
+           y = -max(r_1, r_2) - 2,  
+           label = paste0("No = ", none),
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   annotate("text",
            x = mean(circle_data$x) - 3.2,         
@@ -374,8 +374,8 @@ venn_bushflood_covid_male <- ggplot(circle_data) +
   # Add label oustide of circles for no. experiencing none
   annotate("text",
            x = mean(circle_data$x) - 1.2,         
-           y = -max(r_1, r_2) - 2,         
-           label = none,
+           y = -max(r_1, r_2) - 2,  
+           label = paste0("No = ", none),
            size = 7 / 2.845276, color = "black", family = "Arial", fontface = "bold") +
   annotate("text",
            x = mean(circle_data$x) - 1.2,         
