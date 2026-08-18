@@ -70,3 +70,4 @@ model_FIRSTAGE_followup <- lm(FIRSTAGE_followup ~ PRS_stand_genetic + SEX_geneti
 summary(model_FIRSTAGE_followup)
 ## ----
 
+

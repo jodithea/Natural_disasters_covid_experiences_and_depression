@@ -51,7 +51,13 @@ lowplus_model <- glm(SYMPlowplus ~
                        PC1_genetic +
                        PC2_genetic +
                        PC3_genetic +
-                       PC4_genetic,
+                       PC4_genetic +
+                       PC5_genetic +
+                       PC6_genetic +
+                       PC7_genetic +
+                       PC8_genetic +
+                       PC9_genetic + 
+                       PC10_genetic,
                      family = binomial(link = 'logit'),
                      data = x)
 
@@ -63,7 +69,13 @@ medplus_model <- glm(SYMPmedplus ~
                        PC1_genetic +
                        PC2_genetic +
                        PC3_genetic +
-                       PC4_genetic,
+                       PC4_genetic +
+                       PC5_genetic +
+                       PC6_genetic +
+                       PC7_genetic +
+                       PC8_genetic +
+                       PC9_genetic + 
+                       PC10_genetic,
                      family = binomial(link = 'logit'),
                      data = x)
 
@@ -139,7 +151,13 @@ lowplus_model <- glm(SYMPlowplus ~
                        PC1_genetic +
                        PC2_genetic +
                        PC3_genetic +
-                       PC4_genetic,
+                       PC4_genetic +
+                       PC5_genetic +
+                       PC6_genetic +
+                       PC7_genetic +
+                       PC8_genetic +
+                       PC9_genetic + 
+                       PC10_genetic,
                      family = binomial(link = 'logit'),
                      data = x[x$SEX_genetic == "Female", ])
 
@@ -150,7 +168,13 @@ medplus_model <- glm(SYMPmedplus ~
                        PC1_genetic +
                        PC2_genetic +
                        PC3_genetic +
-                       PC4_genetic,
+                       PC4_genetic +
+                       PC5_genetic +
+                       PC6_genetic +
+                       PC7_genetic +
+                       PC8_genetic +
+                       PC9_genetic + 
+                       PC10_genetic,
                      family = binomial(link = 'logit'),
                      data = x[x$SEX_genetic == "Female", ])
 
@@ -226,7 +250,13 @@ lowplus_model <- glm(SYMPlowplus ~
                        PC1_genetic +
                        PC2_genetic +
                        PC3_genetic +
-                       PC4_genetic,
+                       PC4_genetic +
+                       PC5_genetic +
+                       PC6_genetic +
+                       PC7_genetic +
+                       PC8_genetic +
+                       PC9_genetic + 
+                       PC10_genetic,
                      family = binomial(link = 'logit'),
                      data = x[x$SEX_genetic == "Male", ])
 
@@ -237,7 +267,13 @@ medplus_model <- glm(SYMPmedplus ~
                        PC1_genetic +
                        PC2_genetic +
                        PC3_genetic +
-                       PC4_genetic,
+                       PC4_genetic +
+                       PC5_genetic +
+                       PC6_genetic +
+                       PC7_genetic +
+                       PC8_genetic +
+                       PC9_genetic + 
+                       PC10_genetic,
                      family = binomial(link = 'logit'),
                      data = x[x$SEX_genetic == "Male", ])
 

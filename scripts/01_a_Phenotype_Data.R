@@ -238,3 +238,5 @@ phen_data <- phen_data %>%
 
 save(phen_data, file = "data/phen_data.RData")
 ## -----
+
+LEC5UNWE_EXCLND 

@@ -38,3 +38,4 @@ original_exploration_and_trials/
 *.Rproj.user/
 *.Rproj
 .Rproj.user
+*.RDataTmp

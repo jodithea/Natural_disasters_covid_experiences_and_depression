@@ -99,6 +99,10 @@ knitr::read_chunk('scripts/11_Venn_2019bushflood_and_covid.R')
 knitr::read_chunk('scripts/12_Summary_figure_regressions.R')
 
 knitr::read_chunk('scripts/13_Summary_results.R')
+
+knitr::read_chunk('scripts/14_Sensitivity_analysis_linear_models.R')
+
+knitr::read_chunk('scripts/15_Sensitivity_analysis_trauma_burden.R')
 ```
 
 ```{r LoadDataRmd, eval = TRUE, echo = FALSE}
@@ -131,6 +135,12 @@ load(file = "models/Twenty19BushFloodCovidBoth_PartPO_models.RData")
 # Model dataframe
 load(file = "data/NUMSYMPALL_PO_results_df.RData")
 load(file = "data/NUMSYMPALL_PO_plotting_df.RData")
+
+# Sensitivity analysis - linear model
+load(file = "models/linear_models.RData")
+
+# Sensitivity analysis - trauma burden score included as covariate
+load(file = "models/trauma_models.RData")
 
 ``` 
 
@@ -1130,6 +1140,48 @@ plink --bfile /path_three/Release11_Observed/PLINK_format/GWAS_Build37PlusStrand
 
 ## Polygenic score for depression as predictor
 ```{r SummaryTablePGS, eval = TRUE}
+
+```
+
+
+# Sensitivity Analysis: Linear Models
+
+* Run linear models to check categorisation of number of depressive symptoms isn't affecting the results
+
+## Fit models
+```{r FitLinearModels}
+
+```
+
+## Results table
+```{r SummaryDataLinearModels, eval = TRUE}
+
+```
+
+# Sensitivity Analysis: Trauma Burden Score covariate
+
+* Run oridinal regression models including an overall trauma burden score as an extra covariate
+
+## Create trauma burden score
+
+* Create trauma burden score using the LEC-5
+* Use 16 items, excluding the natural disaster item
+* 1 = happened to me / witness / learned / part of my job
+* 0 = doesn't apply
+* Sum so get 0 - 16 trauma burden
+
+```{r CreateTraumaBurden}
+
+```
+
+
+## Fit models
+```{r FitModelswithTraumaBurden}
+
+```
+
+## Results table
+```{r SummaryDataTraumaBurdenModels, eval = TRUE}
 
 ```
 
