@@ -103,6 +103,11 @@ knitr::read_chunk('scripts/13_Summary_results.R')
 knitr::read_chunk('scripts/14_Sensitivity_analysis_linear_models.R')
 
 knitr::read_chunk('scripts/15_Sensitivity_analysis_trauma_burden.R')
+
+knitr::read_chunk('scripts/16_Missingness_ND_firstdepression.R')
+knitr::read_chunk('scripts/17_Missingness_bushflood_currentdepression.R')
+knitr::read_chunk('scripts/18_Missingness_covid_currentdepression.R')
+knitr::read_chunk('scripts/19_Missingness_2019bushflood_plus_covid_currentdepression.R')
 ```
 
 ```{r LoadDataRmd, eval = TRUE, echo = FALSE}
@@ -1184,6 +1189,47 @@ plink --bfile /path_three/Release11_Observed/PLINK_format/GWAS_Build37PlusStrand
 ```{r SummaryDataTraumaBurdenModels, eval = TRUE}
 
 ```
+
+# Explore Missingness
+
+## Any natural disaster (first depression)
+
+
+
+```{r MissingnessNDFirst, eval = TRUE}
+
+```
+
+
+
+
+## 2019 Bushfires/Floods
+
+
+
+```{r MissingnessBushFlood, eval = TRUE}
+
+```
+
+
+## COVID-19
+
+
+
+```{r MissingnessCOVID, eval = TRUE}
+
+```
+
+
+## 2019 Bushfires/Floods + COVID-19
+
+
+
+```{r MissingnessBushFloodCOVID, eval = TRUE}
+
+```
+
+
 
 
 # Session Info
