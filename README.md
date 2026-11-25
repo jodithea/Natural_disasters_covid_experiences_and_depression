@@ -4,7 +4,7 @@ Repository for scripts used in statistical analyses to explore the association b
 
 This repository has been archived on Zenodo and assigned a DOI:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19583327.svg)](https://doi.org/10.5281/zenodo.19583326)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19583326.svg)](https://doi.org/10.5281/zenodo.19583326)
 
 The associated publication for this repository:
 
