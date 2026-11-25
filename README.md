@@ -10,4 +10,4 @@ The associated publication for this repository:
 
 [![DOI](https://img.shields.io/badge/DOI-10.1080/20008066.2026.2766034-blue)](https://doi.org/10.1080/20008066.2026.2766034)
 
-Jodi T Thomas, Lucía Colodro Conde, AGDS Research Team & Brittany L Mitchell. Associations between natural disaster and COVID-19 experiences and depression symptom severity in individuals with a history of depression. European Journal of Psychotraumatology (2026).
+Jodi T Thomas, Lucía Colodro-Conde, AGDS Research Team & Brittany L Mitchell. Associations between natural disaster and COVID-19 experiences and depression symptom severity in individuals with a history of depression. European Journal of Psychotraumatology (2026).
